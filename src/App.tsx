@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+// @ts-ignore
 import jwt from 'jsonwebtoken';
 import logo from './logo.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const a = jwt.sign({ cat: 'dog' }, 'some-secret');
+  const someToken = jwt.sign({ cat: 'dog' }, 'some-secret');
 
   return (
     <div className="App">
